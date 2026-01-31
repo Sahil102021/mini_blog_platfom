@@ -109,8 +109,10 @@ DELETE /api/posts/:id
 3. Create a `.env` file in the `Backend` directory:
    ```env
    PORT=3000
+   NODE_ENV=development
    MONGODB_URI=your_mongodb_uri
    JWT_SECRET=your_jwt_secret
+   JWT_EXPIRE=day
    CLOUDINARY_CLOUD_NAME=your_cloudinary_name
    CLOUDINARY_API_KEY=your_cloudinary_api_key
    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
