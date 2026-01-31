@@ -7,17 +7,13 @@ const postSchema = new Schema(
       type: String,
       required: true,
       trim: true,
-      minlength: 3,
-      maxlength: 200,
     },
     content: {
       type: String,
       required: true,
-      minlength: 10,
     },
     excerpt: {
       type: String,
-      maxlength: 300,
     },
     author: {
       type: Schema.Types.ObjectId,

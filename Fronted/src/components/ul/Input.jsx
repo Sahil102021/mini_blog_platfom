@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Input = ({
-  type = 'text',
+  type = "text",
   id,
   name,
   value,
@@ -11,9 +11,8 @@ const Input = ({
   className,
   checked,
   accept,
-
 }) => {
-  if (type === 'checkbox') {
+  if (type === "checkbox") {
     return (
       <input
         type="checkbox"
@@ -34,8 +33,9 @@ const Input = ({
       value={value}
       accept={accept}
       onChange={onChange}
+      required={true}
       className={`block text-sm md:text-base w-full pl-10 pr-10 py-1.5 md:py-3 border ${
-        error ? 'border-red-500' : 'border-gray-300'
+        error ? "border-red-500" : "border-gray-300"
       } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors ${className}`}
       placeholder={placeholder}
     />

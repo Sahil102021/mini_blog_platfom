@@ -15,7 +15,7 @@ const BlogManagement = () => {
     title: "",
     excerpt: "",
     content: "",
-    featuredImage: null, // MUST be null
+    featuredImage: null, 
   });
 
   const token = getToken();
@@ -46,7 +46,7 @@ const BlogManagement = () => {
   const handleFileChange = (e) => {
     setForm((prev) => ({
       ...prev,
-      featuredImage: e.target.files[0], // REAL FILE
+      featuredImage: e.target.files[0],
     }));
   };
 
@@ -220,6 +220,8 @@ const BlogManagement = () => {
                   value={form.title}
                   onChange={handleChange}
                   className="pl-1! pr-1!"
+                  placeholder="title"
+                  
                 />
               </div>
 
@@ -232,6 +234,7 @@ const BlogManagement = () => {
                   value={form.excerpt}
                   onChange={handleChange}
                   className={"pl-1! pr-1!"}
+                  placeholder="excerpt"
                 />
               </div>
 
@@ -244,6 +247,7 @@ const BlogManagement = () => {
                   accept="image/*"
                   onChange={handleFileChange}
                   className={"pl-1! pr-1!"}
+                  placeholder="photo"
                 />
               </div>
 
@@ -255,7 +259,10 @@ const BlogManagement = () => {
                   name="content"
                   value={form.content}
                   onChange={handleChange}
+                  required
+                  minLength={20}
                   className="w-full h-32 border rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Content must be at least 10 words long."
                 />
               </div>
 
